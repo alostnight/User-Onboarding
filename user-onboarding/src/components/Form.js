@@ -26,6 +26,8 @@ export default function Form() {
     terms: false,
   });
 
+  
+
   const [buttonDisabled, setButtonDisabled] = useState(true);
 
   useEffect(() => {
