@@ -77,6 +77,7 @@ export default function Form() {
       .post("https://reqres.in/api/user", formState)
       .then((Response) => console.log(Response))
       .catch((err) => console.log(err));
+
   };
 
   return (

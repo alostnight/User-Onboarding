@@ -11,7 +11,7 @@ export default function App() {
 
 
   return (
-    <div class="home">
+    <div className="home">
         <div>
           <Navigation />
           <Route exact path="/" component={Home} />
