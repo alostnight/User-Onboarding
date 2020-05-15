@@ -13,7 +13,7 @@ const formInfo = yup.object().shape({
     .required("Please Enter Password")
     .matches(
       /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
-      "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and one special case Character"
+      "Must Contain 8 Characters, One Number and one special case Character"
     ),
   terms: yup.boolean().oneOf([true], "Please Agree To The Terms"),
 });
@@ -115,6 +115,20 @@ export default function Form() {
           <p className="error">{errorState.password}</p>
         ) : null}
       </label>
+      <label htmlFor="terms">
+        <input
+          type="checkbox"
+          id="terms"
+          name="terms"
+          checked={formState.terms}
+          onChange={inputChange}
+        />
+        Terms & Conditions
+        {errorState.terms.length > 0 ? (
+          <p className="error">{errorState.terms}</p>
+        ) : null}
+      </label>
+      <button disabled={buttonDisabled}>Submit</button>
     </form>
   );
 }
