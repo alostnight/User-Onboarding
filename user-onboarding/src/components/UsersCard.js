@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from "react-router-dom";
 
 
-export default function Users() {
-    return (
-      
-    );
-  }
+export default function UsersCard(props) {
+    return;
+  };
